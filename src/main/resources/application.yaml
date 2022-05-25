@@ -6,3 +6,6 @@ spring:
     username: serhiimaltsev
     password: 1234567890
     driver-class-name: org.postgresql.Driver
+  mustache:
+    servlet:
+      expose-request-attributes: true

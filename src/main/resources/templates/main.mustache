@@ -9,6 +9,14 @@
 </head>
 <body>
 <div>
+
+    <div>
+        <form action="/logout" method="post">
+            <input type="submit" value="Sign Out">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        </form>
+    </div>
+
     <form method="post">
         <label>
             <input type="text" name="text" placeholder="Enter your message">
@@ -17,6 +25,7 @@
             <input type="text" name="tag" placeholder="Tag">
         </label>
         <button type="submit">Add</button>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     </form>
 </div>
 
@@ -24,6 +33,7 @@
 <div> List of messages</div>
 
 <form action="filter" method="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     <input type="text" name="filter">
     <button type="submit">Find</button>
 </form>
